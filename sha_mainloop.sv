@@ -69,7 +69,8 @@ module sha_mainloop	#(parameter PADDED_SIZE = 512)
 	
 	logic [31:0] ch_efg, maj_abc, sum0_a, sum1_e, kj, wj;
 
-	always_comb begin
+	//always_comb begin
+	always @(*) begin
 		ch_efg = ch(e,f,g);
 		maj_abc = maj(a,b,c);
 		sum0_a = sum0(a);
